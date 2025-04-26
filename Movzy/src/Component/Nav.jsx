@@ -3,8 +3,8 @@ import React from "react";
 const NavFun = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary  ">
+        <div className="container-fluid ">
           <a className="navbar-brand" href="#">
             Navbar
           </a>
