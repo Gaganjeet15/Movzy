@@ -9,7 +9,7 @@ const Movie_list = () => {
       const allMovies = [];
 
       const res = await fetch(
-        `https://api.themoviedb.org/3/trending/all/day?api_key=${Movie_API}`
+        `https://api.themoviedb.org/3/movie/popular?api_key=${Movie_API}`
       );
       const data = await res.json();
       console.log(data);

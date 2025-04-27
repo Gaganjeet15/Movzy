@@ -1,12 +1,12 @@
 import "./App.css";
-import NavFun from "./Component/nav";
-import Movie_list from "./Component/movie_list/Movie_list";
-
+import NavFun from "./Component/Nav/Nav";
+import MovieList from "./Component/movie_list/Movie_list";
+import { Outlet } from "react-router-dom";
 function App() {
   return (
     <>
       <NavFun />
-      <Movie_list />{" "}
+      <Outlet />
     </>
   );
 }

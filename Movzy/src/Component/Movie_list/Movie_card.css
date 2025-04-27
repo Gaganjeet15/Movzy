@@ -7,18 +7,10 @@
 .movie-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: inherit;
   object-position: top;
   display: block;
-  border-radius: 30px;
-}
-
-.movie-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
 .summary-text {
@@ -32,6 +24,8 @@
   transform: translateY(100%);
   transition: transform 0.3s ease-in-out;
   font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .movie-img:hover .summary-text {
@@ -45,11 +39,13 @@
   margin-left: 11px;
 }
 .movie-title {
-  white-space: nowrap;
+  font-weight: 700;
+  font-size: 17;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 180px;
   margin-left: 11px;
+  padding-bottom: 5px;
 }
 
 .movie-poster {

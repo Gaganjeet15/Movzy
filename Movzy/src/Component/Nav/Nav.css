@@ -1,0 +1,66 @@
+/* NavFun.css */
+
+.navbar-custom {
+  background-color: #111; /* dark background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 1rem 0;
+}
+
+.navbar-brand-custom {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #ffc107; /* Bootstrap warning color */
+}
+
+.navbar-brand-custom:hover {
+  color: #ffca2c;
+}
+
+.nav-link-custom {
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav-link-custom:hover {
+  color: #ffc107;
+}
+
+.search-input-custom {
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #ffc107;
+}
+
+.search-input-custom::placeholder {
+  color: #bbb;
+}
+
+.search-button-custom {
+  background-color: #ffc107;
+  color: #111;
+  font-weight: 600;
+  border: none;
+}
+
+.search-button-custom:hover {
+  background-color: #e0a800;
+  color: #000;
+}
+/* Active link color */
+.active-link {
+  color: #e0a800 !important;
+}
+
+/* Inactive link color */
+.inactive-link {
+  color: gray !important;
+}
+
+/* NavFun.css */
+.navbar-nav .nav-item .nav-link-custom.active-link {
+  color: #e0a800 !important;
+}
+
+.navbar-nav .nav-item .nav-link-custom.inactive-link {
+  color: gray !important;
+}
