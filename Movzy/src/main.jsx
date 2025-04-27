@@ -5,9 +5,9 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
-import Movie_list from "./Component/movie_list/Movie_list.jsx";
 import Movies from "./Component/pages/Movies.jsx";
 import TV_Show from "./Component/pages/TV_Show.jsx";
+import Home from "./Component/pages/Home.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/home",
-        element: <Movie_list />,
+        element: <Home />,
       },
       {
         path: "/movie",
