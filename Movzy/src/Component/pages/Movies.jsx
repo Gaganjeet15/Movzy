@@ -6,15 +6,19 @@ const Movies = () => {
 
   useEffect(() => {
     const fetchAllMovies = async () => {
-      const allMovies = [];
-
-      const res = await fetch(
-        `https://api.themoviedb.org/3/movie/popular?api_key=${Movie_API}`
-      );
-      const data = await res.json();
-      allMovies.push(...data.results);
-
-      setMovies(allMovies);
+      try {
+        const res = await fetch(
+          `https://api.themoviedb.org/3/movie/popular?api_key=${Movie_API}`
+        );
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await res.json();
+        const movie_arr = [...data.results];
+        setMovies(movie_arr);
+      } catch (error) {
+        console.error("There was a problem with the fetch operation:", error);
+      }
     };
 
     fetchAllMovies();

@@ -6,12 +6,19 @@ const TV_Show = () => {
 
   useEffect(() => {
     const fetchShow = async () => {
-      const res = await fetch(
-        `https://api.themoviedb.org/3/tv/popular?api_key=${Show_API}`
-      );
-      const data = await res.json();
-      const show_arr = [...data.results];
-      setShow(show_arr);
+      try {
+        const res = await fetch(
+          `https://api.themoviedb.org/3/tv/popular?api_key=${Show_API}`
+        );
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await res.json();
+        const show_arr = [...data.results];
+        setShow(show_arr);
+      } catch (error) {
+        console.error("There was a problem with the fetch operation:", error);
+      }
     };
     fetchShow();
   }, []);
