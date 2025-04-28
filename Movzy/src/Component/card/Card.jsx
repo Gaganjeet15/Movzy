@@ -8,6 +8,13 @@ const Card = ({ movie_mp, show_mp }) => {
   return (
     <div className="movie-poster">
       <div className="movie-img">
+        <div className="star-logo">
+          <img src="src/assets/star.png" alt="Star logo" />
+          <p>
+            {Math.floor(data.vote_average * 10) / 10 ||
+              Math.floor(data.vote_average * 10) / 10}
+          </p>
+        </div>
         <a
           href={`https://www.themoviedb.org/${isMovie ? "movie" : "tv"}/${
             data.id
@@ -30,10 +37,6 @@ const Card = ({ movie_mp, show_mp }) => {
           {data.release_date?.slice(0, 4) || data.first_air_date?.slice(0, 4)}
         </h5>
         <h5>Movie</h5>
-        <h5>
-          {Math.floor(data.vote_average) || Math.floor(data.vote_average)}
-          <img className="star-logo" src="src/assets/star.png" alt="" />
-        </h5>
       </div>
 
       <div className="movie-title">
