@@ -31,17 +31,16 @@ const Card = ({ movie_mp, show_mp }) => {
             data.overview.slice(0, 100) + "..."}
         </p>
       </div>
+      {/* 
+        <div className="movie-release">
+          <h5>
+            {data.release_date?.slice(0, 4) || data.first_air_date?.slice(0, 4)}
+          </h5>
+        </div> */}
 
-      <div className="movie-release">
-        <h5>
-          {data.release_date?.slice(0, 4) || data.first_air_date?.slice(0, 4)}
-        </h5>
-        <h5>Movie</h5>
-      </div>
-
-      <div className="movie-title">
+      {/* <div className="movie-title">
         {data.original_title || show_mp.original_name}
-      </div>
+      </div> */}
     </div>
   );
 };
