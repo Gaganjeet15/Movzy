@@ -21,13 +21,13 @@ const NavFun = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-3 text-center">
               <li className="nav-item ">
-                <NavLink
+                {/* <NavLink
                   to="/home"
                   className={({ isActive }) =>
                     `nav-link ${isActive ? "active-link" : "inactive-link"} `
                   }>
                   Home
-                </NavLink>
+                </NavLink> */}
               </li>
               <li className="nav-item">
                 <NavLink

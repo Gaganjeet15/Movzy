@@ -7,7 +7,7 @@ import "./index.css";
 import App from "./App.jsx";
 import Movies from "./Component/pages/Movies.jsx";
 import TV_Show from "./Component/pages/TV_Show.jsx";
-import Home from "./Component/pages/Home.jsx";
+// import Home from "./Component/pages/Home.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +15,8 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/home",
-        element: <Home />,
+        index: true, //
+        element: <Movies />,
       },
       {
         path: "/movie",
