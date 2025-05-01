@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card.css";
-
+import star from "../../assets/star.png";
 const Card = ({ movie_mp, show_mp }) => {
   const data = movie_mp || show_mp;
   const isMovie = !!movie_mp;
@@ -9,7 +9,7 @@ const Card = ({ movie_mp, show_mp }) => {
     <div className="movie-poster">
       <div className="movie-img">
         <div className="star-logo">
-          <img src="src/assets/star.png" alt="Star logo" />
+          <img src={star} alt="logo" />
           <p>
             {Math.floor(data.vote_average * 10) / 10 ||
               Math.floor(data.vote_average * 10) / 10}
