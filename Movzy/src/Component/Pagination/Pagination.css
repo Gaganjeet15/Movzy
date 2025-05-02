@@ -59,3 +59,47 @@
 .page-link {
   user-select: none;
 }
+/* Responsive styles */
+@media screen and (max-width: 480px) {
+  .pagination {
+    gap: 4px;
+  }
+
+  .page-link {
+    min-width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  /* On very small screens, hide some page numbers and show the indicator instead */
+  .page-item:not(:first-child):not(:last-child):not(.ellipsis) {
+    display: none;
+  }
+
+  .page-item.ellipsis {
+    display: none;
+  }
+
+  /* But always show the current page */
+  .page-item .page-link.active {
+    display: flex;
+  }
+
+  .page-indicator {
+    display: block;
+    font-weight: 500;
+  }
+}
+
+/* For medium screens, show fewer pages */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .pagination {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 8px 0;
+  }
+
+  .page-indicator {
+    display: none;
+  }
+}

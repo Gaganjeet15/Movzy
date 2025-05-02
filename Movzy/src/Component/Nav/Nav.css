@@ -1,66 +1,89 @@
-/* NavFun.css */
-
-.navbar-custom {
-  background-color: #111; /* dark background */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  padding: 1rem 0;
+/* Sidebar Navigation Styles */
+.sidebar-nav {
+  position: fixed;
+  top: 0;
+  right: -280px; /* Start off-screen */
+  width: 280px;
+  height: 100%;
+  background-color: #111;
+  z-index: 1050;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  padding: 1rem;
 }
 
-.navbar-brand-custom {
+.sidebar-nav.open {
+  right: 0; /* Slide in from right */
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.sidebar-brand {
   font-weight: bold;
-  font-size: 1.8rem;
-  color: #ffc107; /* Bootstrap warning color */
-}
-
-.navbar-brand-custom:hover {
-  color: #ffca2c;
-}
-
-.nav-link-custom {
-  font-weight: 600;
-  color: #fff;
-}
-
-.nav-link-custom:hover {
+  font-size: 1.5rem;
   color: #ffc107;
 }
 
-.search-input-custom {
-  background-color: #111;
-  color: #fff;
-  border: 1px solid #ffc107;
-}
-
-.search-input-custom::placeholder {
-  color: #bbb;
-}
-
-.search-button-custom {
-  background-color: #ffc107;
-  color: #111;
-  font-weight: 600;
+.close-sidebar {
+  background: none;
   border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.search-button-custom:hover {
-  background-color: #e0a800;
-  color: #000;
-}
-/* Active link color */
-.active-link {
-  color: #e0a800 !important;
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
 }
 
-/* Inactive link color */
-.inactive-link {
-  color: gray !important;
+.sidebar-item {
+  margin-bottom: 0.5rem;
 }
 
-/* NavFun.css */
-.navbar-nav .nav-item .nav-link-custom.active-link {
-  color: #e0a800 !important;
+.sidebar-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s;
 }
 
-.navbar-nav .nav-item .nav-link-custom.inactive-link {
-  color: gray !important;
+.sidebar-link:hover {
+  background-color: #222;
+}
+
+.sidebar-search {
+  padding: 0.5rem 0;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+
+/* Only show the sidebar on mobile */
+@media (min-width: 992px) {
+  .sidebar-nav,
+  .sidebar-overlay {
+    display: none;
+  }
+}
+.search-button-custom {
+  color: aliceblue;
 }
